@@ -115,6 +115,7 @@ vendor.video.disable.ubwc=1
 vidc.enc.dcvs.extra-buff-count=2
 
 # Display
+sys.use_fifo_ui=1
 debug.cpurend.vsync=false
 debug.hwui.renderer=opengl
 debug.renderengine.backend=skiaglthreaded
