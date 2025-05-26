@@ -91,7 +91,9 @@ on boot
     chown system system /persist/speccfg/vendor_persist.prop
     chown system system /persist/speccfg/submask
     chown system system /persist/speccfg/partition
-    
+    # Lineage Health
+    chmod 0660 /sys/class/power_supply/battery/charging_enabled
+    chown system system /sys/class/power_supply/battery/charging_enabled
     # Optimize vfs cache pressure
     write /proc/sys/vm/vfs_cache_pressure 40
 

@@ -390,8 +390,6 @@ firmware_directories /vendor/firmware_mnt/image/
 /sys/class/graphics/fb0     mode                     0664    system  graphics
 /sys/class/graphics/fb0     msm_cmd_autorefresh_en   0664    system  graphics
 
-# Charger
-/sys/class/power_supply/battery    input_suspend     0660    system  system
 
 # torch
 /sys/devices/platform/soc/800f000.qcom,spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pm660l@3:qcom,leds@d300/leds/led:switch_0 brightness 0660 cameraserver camera
