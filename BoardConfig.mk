@@ -102,6 +102,10 @@ BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 BOARD_KERNEL_PAGESIZE := 4096
 TARGET_KERNEL_CONFIG := platina_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/sdm660
+TARGET_KERNEL_VERSION := 4.4
+# The 4.4 base builds a 32-bit compat vDSO with clang.
+TARGET_KERNEL_MAKE_ENV += CROSS_COMPILE_ARM32=arm-linux-gnueabi-
+TARGET_KERNEL_MAKE_ENV += CLANG_TRIPLE_ARM32=arm-linux-androideabi-
 
 # Media
 TARGET_USES_ION := true
