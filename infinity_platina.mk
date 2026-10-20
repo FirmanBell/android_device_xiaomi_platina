@@ -29,6 +29,8 @@ TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_HAS_UDFPS := false
 TARGET_SCREEN_WIDTH := 1080
 
+# Bypass Charging
+BYPASS_CHARGE_SUPPORTED := true
 
 # Inherit from platina device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
