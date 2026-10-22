@@ -23,7 +23,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk
 $(call inherit-product, vendor/infinity/config/common_full_phone.mk)
 INFINITY_BUILD_TYPE := UNOFFICIAL
 WITH_GAPPS := true
-INFINITY_MAINTAINER := Mrandrey167
+INFINITY_MAINTAINER := Lolipop
 
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_HAS_UDFPS := false

@@ -37,7 +37,7 @@ persist.vendor.ims.disableIMSLogs=1
 persist.vendor.ims.disableQXDMLogs=1
 
 # Infinity-X
-ro.product.marketname=Mi 8 Lite
+ro.product.marketname=MI 8 Lite
 ro.infinity.soc=Snapdragon 660
 ro.infinity.battery=3350 mAh
 ro.infinity.display=6.26″, 60Hz, 2280x1080
