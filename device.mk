@@ -513,9 +513,6 @@ PRODUCT_PACKAGES += \
 
 # Speed profile services and wifi-service to reduce RAM and storage
 PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
-PRODUCT_PROPERTY_OVERRIDES += \
-    pm.dexopt.shared=quicken
-PRODUCT_PROPERTY_OVERRIDES += dalvik.vm.heapsize=256m
 USE_DEX2OAT_DEBUG := false
 PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false

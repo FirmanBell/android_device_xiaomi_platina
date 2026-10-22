@@ -184,6 +184,24 @@
   ],
   "Actions": [
     {
+      "PowerHint": "INTERACTION",
+      "Node": "CPUBigClusterMinFreq",
+      "Duration": 150,
+      "Value": "1401600"
+    },
+    {
+     "PowerHint": "INTERACTION",
+     "Node": "CPULittleClusterMinFreq",
+     "Duration": 150,
+     "Value": "1113600"
+    },
+    {
+     "PowerHint": "INTERACTION",
+     "Node": "TASchedtuneBoost",
+     "Duration": 150,
+     "Value": "10"
+    },
+    {
       "PowerHint": "SUSTAINED_PERFORMANCE",
       "Node": "PowerHALMainState",
       "Duration": 0,

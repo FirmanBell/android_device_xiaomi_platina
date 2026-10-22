@@ -109,6 +109,31 @@ case "$emmc_boot"
     ;;
 esac
 
+# CPU governor & scheduler tuning
+for policy in /sys/devices/system/cpu/cpufreq/policy*
+do
+    avail=$(cat $policy/scaling_available_governors)
+    case "$avail" in
+        *schedutil*)
+            echo schedutil > $policy/scaling_governor
+            echo 500 > $policy/schedutil/up_rate_limit_us
+            echo 20000 > $policy/schedutil/down_rate_limit_us
+            ;;
+        *interactive*)
+            echo interactive > $policy/scaling_governor
+            echo 1 > $policy/interactive/io_is_busy
+            echo "85 1500:90 1800:70" > $policy/interactive/target_loads
+            echo 20000 > $policy/interactive/min_sample_time
+            echo 19000 > $policy/interactive/timer_rate
+            ;;
+    esac
+done
+
+# Boost top-app
+echo 1 > /dev/stune/top-app/schedtune.prefer_idle
+echo 0 > /dev/stune/background/schedtune.boost
+echo 0 > /dev/stune/background/schedtune.prefer_idle
+
 # Post-setup services
 setprop vendor.post_boot.parsed 1
 

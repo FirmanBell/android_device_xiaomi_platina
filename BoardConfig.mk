@@ -24,7 +24,7 @@ TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_ABI2 :=
-TARGET_CPU_VARIANT := generic
+TARGET_CPU_VARIANT := cortex-a73
 TARGET_CPU_VARIANT_RUNTIME := cortex-a73
 
 TARGET_2ND_ARCH := arm
@@ -93,8 +93,7 @@ BOARD_KERNEL_CMDLINE := \
     msm_rtb.filter=0x37 \
     service_locator.enable=1 \
     swiotlb=1 \
-    usbcore.autosuspend=7 \
-    user_debug=31
+    usbcore.autosuspend=7
 
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
