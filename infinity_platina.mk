@@ -39,6 +39,9 @@ PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_NAME := infinity_platina
 PRODUCT_MODEL := MI 8 Lite
 
+# Bypass Charging
+BYPASS_CHARGE_SUPPORTED := true
+
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 TARGET_VENDOR_PRODUCT_NAME := platina
