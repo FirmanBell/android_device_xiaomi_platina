@@ -134,6 +134,10 @@ echo 1 > /dev/stune/top-app/schedtune.prefer_idle
 echo 0 > /dev/stune/background/schedtune.boost
 echo 0 > /dev/stune/background/schedtune.prefer_idle
 
+# Read-ahead for eMMC (/data lives on mmcblk0, not dm-*)
+echo 512 > /sys/block/mmcblk0/queue/read_ahead_kb
+echo 512 > /sys/block/mmcblk0/bdi/read_ahead_kb
+
 # Post-setup services
 setprop vendor.post_boot.parsed 1
 

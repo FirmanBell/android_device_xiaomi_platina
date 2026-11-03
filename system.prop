@@ -43,5 +43,8 @@ ro.infinity.battery=3350 mAh
 ro.infinity.display=6.26″, 60Hz, 2280x1080
 ro.infinity.camera=24MP + 12MP + 5MP
 
+# USAP pool for faster app launch
+persist.device_config.runtime_native.usap_pool_enabled=true
+
 # Disable GC freed lines
 dalvik.vm.debug.alloc=0
