@@ -422,10 +422,6 @@ PRODUCT_PACKAGES += \
     libsqlite.vendor \
     libsysutils.vendor
 
-# KProfiles
-PRODUCT_PACKAGES += \
-    KProfiles
-
 # Bypass charging
 PRODUCT_PACKAGES += \
     BypassCharge
