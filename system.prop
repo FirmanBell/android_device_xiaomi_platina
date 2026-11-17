@@ -43,3 +43,9 @@ ro.infinity.soc=Snapdragon 660
 ro.infinity.battery=3350 mAh
 ro.infinity.display=6.26″, 60Hz, 2280x1080
 ro.infinity.camera=24MP + 12MP + 5MP
+
+# Dexopt
+pm.dexopt.install=speed-profile
+pm.dexopt.bg-dexopt=speed-profile
+pm.dexopt.ab-ota=verify
+pm.dexopt.boot-after-ota=verify
