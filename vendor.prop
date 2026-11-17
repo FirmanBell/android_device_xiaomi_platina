@@ -116,6 +116,9 @@ vidc.enc.dcvs.extra-buff-count=2
 
 # Display
 debug.renderengine.backend=skiaglthreaded
+debug.sf.latch_unsignaled=1
+debug.sf.disable_backpressure=1
+debug.hwui.use_buffer_age=true
 debug.sf.enable_transaction_tracing=false
 persist.sys.sf.color_mode=9
 persist.sys.sf.native_mode=2
