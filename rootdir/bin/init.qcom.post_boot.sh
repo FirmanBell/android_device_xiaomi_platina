@@ -101,6 +101,27 @@ do
 done
 echo "cpufreq" > /sys/class/devfreq/soc:qcom,mincpubw/governor
 
+# CPU governor: schedutil with short up / long down rate limits
+for c in cpu0 cpu4
+do
+    avail=`cat /sys/devices/system/cpu/$c/cpufreq/scaling_available_governors`
+    case "$avail" in
+        *schedutil*)
+            echo schedutil > /sys/devices/system/cpu/$c/cpufreq/scaling_governor
+            echo 500 > /sys/devices/system/cpu/$c/cpufreq/schedutil/up_rate_limit_us
+            echo 20000 > /sys/devices/system/cpu/$c/cpufreq/schedutil/down_rate_limit_us
+            ;;
+    esac
+done
+
+# schedtune
+if [ -e /dev/stune/top-app/schedtune.prefer_idle ]; then
+    echo 1 > /dev/stune/top-app/schedtune.prefer_idle
+fi
+if [ -e /dev/stune/background/schedtune.boost ]; then
+    echo 0 > /dev/stune/background/schedtune.boost
+fi
+
 # Start cdsprpcd only for sdm660 and disable for sdm630 and sdm636
 start vendor.cdsprpcd
 
