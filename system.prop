@@ -36,3 +36,13 @@ persist.vendor.ims.disableQXDMLogs=1
 
 # Zygote Preforking
 persist.device_config.runtime_native.usap_pool_enabled=true
+
+# Mist OS - About phone
+ro.mist.display=1080 x 2280, 60 hz
+ro.mist.battery=3350mAh
+ro.mist.soc=Snapdragon® 660
+ro.mist.camera=12MP + 5MP
+ro.mist.front=24MP
+ro.mist.platform=SDM660
+ro.mist.screen=6.26' IPS LCD
+ro.mist.device.name=MI 8 Lite
