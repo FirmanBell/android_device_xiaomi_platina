@@ -22,7 +22,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk
 # Inherit some common Infinity-X stuff
 $(call inherit-product, vendor/infinity/config/common_full_phone.mk)
 INFINITY_BUILD_TYPE := UNOFFICIAL
-WITH_GAPPS := true
+WITH_GAPPS := false
 INFINITY_MAINTAINER := Lolipop
 
 TARGET_BOOT_ANIMATION_RES := 1080
