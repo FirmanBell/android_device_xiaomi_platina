@@ -114,6 +114,22 @@ do
     esac
 done
 
+# schedutil: ramp up quickly under load (only if this kernel exposes the knobs)
+for c in cpu0 cpu4
+do
+    g=/sys/devices/system/cpu/$c/cpufreq/schedutil
+    if [ -e $g/hispeed_load ]; then
+        echo 80 > $g/hispeed_load
+    fi
+    if [ -e $g/hispeed_freq ]; then
+        if [ "$c" = "cpu0" ]; then
+            echo 1113600 > $g/hispeed_freq
+        else
+            echo 1401600 > $g/hispeed_freq
+        fi
+    fi
+done
+
 # schedtune
 if [ -e /dev/stune/top-app/schedtune.prefer_idle ]; then
     echo 1 > /dev/stune/top-app/schedtune.prefer_idle
